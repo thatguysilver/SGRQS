@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset = 'utf-8'>
+<head>
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous">
+  </script>
+</head>
+<body>
+
+<h2>Test</h2>
+
+<button>Try it</button>
+
+<script>
+$(document).ready(function() {
+
+  $("button").on("click", function(){
+    $.getJSON("quotes.json", function(json) {
+      $("h2").html(JSON.stringify(json));
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
