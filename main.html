@@ -6,10 +6,11 @@
   <style>
   .btn {
     border-radius: 0;
-    border
+    color: #f7faff;
+    background-color: #424242;
   }
   .jumbotron {
-    position: center;
+    margin: 0 auto;
     /*margin-top: 200px;*/
     border: 5px solid #f7faff;
     border-radius: 0;
@@ -22,6 +23,7 @@
   body {
     background-color: #424242;
     color: #f7faff;
+    background-attachment: fixed;
     background-position: center;
   }
   h2 {
@@ -58,9 +60,9 @@ $(document).ready(function() {
 </head>
 <body background = 'background.jpg'>
 
-<div class = 'jumbotron'>
+<div class = 'jumbotron col-md-offset-12'>
   <h2>Quote generator</h2>
   <hr/>
   <h3></h3>
-  <button type = 'button' class = 'btn btn-secondary'>Try it</button>
+  <button type = 'button' class = 'btn btn-secondary'>Quote</button>
 </div>
