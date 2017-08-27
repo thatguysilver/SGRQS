@@ -10,6 +10,7 @@
 <body>
 
 <h2>Test</h2>
+<h3>author</h3>
 
 <button>Try it</button>
 
@@ -18,7 +19,8 @@ $(document).ready(function() {
 
   $("button").on("click", function(){
     $.getJSON("quotes.json", function(json) {
-      $("h2").html(JSON.stringify(json));
+      $("h2").html(JSON.stringify(json[Math.floor(Math.random() * 15)]['quote']));
+      $("h3").html(JSON.stringify(json[Math.floor(Math.random() * 15)]['name']));
         });
 
     });
