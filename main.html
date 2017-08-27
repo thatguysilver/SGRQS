@@ -6,21 +6,15 @@
 			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 			  crossorigin="anonymous">
   </script>
-</head>
-<body>
+  <script>
 
-<h2>Test</h2>
-<h3>author</h3>
-
-<button>Try it</button>
-
-<script>
 $(document).ready(function() {
 
   $("button").on("click", function(){
     $.getJSON("quotes.json", function(json) {
-      $("h2").html(JSON.stringify(json[Math.floor(Math.random() * 15)]['quote']));
-      $("h3").html(JSON.stringify(json[Math.floor(Math.random() * 15)]['name']));
+      var line = json[Math.floor(Math.random() * json.length)]
+      $("h2").html(JSON.stringify(line['quote']));
+      $("h3").html(JSON.stringify(line['name']));
         });
 
     });
@@ -29,4 +23,15 @@ $(document).ready(function() {
 
 </script>
 
-</body>
+</head>
+<body>
+
+<div class = 'wrapper'>
+  <div class = 'one'><h2>Test</h2></div>
+  <div class = 'two'><h3>author</h3></div>
+</div>
+
+<button>Try it</button>
+
+
+</body>k
